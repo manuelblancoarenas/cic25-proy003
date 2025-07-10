@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Disabled;
 
 public class CalculadoraTest {
     @Test
@@ -48,7 +47,7 @@ public class CalculadoraTest {
 
         // Verifico
         double valorActual = cut.getTotal();
-        assertEquals(-8.4, valorActual, 0.00001, "Error: la resta no funcionó");  
+        assertEquals(-8.4, valorActual, 0.00001, "Error: la multiplicación no funcionó");  
     }
 
     @Test
@@ -62,7 +61,7 @@ public class CalculadoraTest {
 
         // Verifico
         double valorActual = cut.getTotal();
-        assertEquals(2.1, valorActual, 0.00001, "Error: la resta no funcionó");
+        assertEquals(2.1, valorActual, 0.00001, "Error: la división no funcionó");
     }
 
     //@Disabled
