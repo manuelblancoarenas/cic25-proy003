@@ -1,7 +1,7 @@
 package es.cic.curso25;
 
 public class Coche {
-    private final double CONSUMO_INSTANTANEO = 4.3;
+    public final double CONSUMO_INSTANTANEO = 4.3;
     private int velocidad = 0;
     
     public int getVelocidad() {
