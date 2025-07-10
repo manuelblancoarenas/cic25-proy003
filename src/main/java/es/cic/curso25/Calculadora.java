@@ -2,14 +2,9 @@ package es.cic.curso25;
 
 public class Calculadora {
     private double total = 0.0d;
-    private double totalMultiplicacionDivision = 1.0d;
 
     public double getTotal() {
         return total;
-    }
-
-    public double getTotalMultiplicacionDivision(){
-        return totalMultiplicacionDivision;
     }
 
     public void sumar(double valor){
@@ -21,13 +16,14 @@ public class Calculadora {
     }
 
     public void multiplicar(double valor) {
-        totalMultiplicacionDivision = totalMultiplicacionDivision*valor;
+        total *= valor;
     }
 
     public void dividir(double valor) {
-        if (valor == 0)
-            totalMultiplicacionDivision = Double.NaN;
-        else
-            totalMultiplicacionDivision = totalMultiplicacionDivision/valor;
+        if (valor == 0.0d) {
+            throw new ArithmeticException("División por cero");
+        } else {
+        total /= valor;
+        }
     }
 }
