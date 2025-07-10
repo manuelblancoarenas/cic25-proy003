@@ -14,7 +14,6 @@ public class CocheTest {
         cut = new Coche();
     }
 
-    @Disabled
     @Test
     void testAcelerar() {
         // Ejecuto
@@ -27,16 +26,27 @@ public class CocheTest {
 
     @Test
     void testFrenar() {
+        // Ejecuto
+        cut.acelerar(50);
+        cut.frenar(0);
+        int velocidadFinal = cut.frenar(23);
 
+        // Verifico
+        assertEquals(27, velocidadFinal);
     }
 
     @Test
     void testGetConsumo() {
+        cut.acelerar(50);
+        double ConsumoActual = cut.getConsumo();
+        assertEquals(2.15, ConsumoActual);
 
     }
 
     @Test
     void testGetVelocidad() {
-
+        cut.acelerar(50);
+        int velocidadFinal = cut.getVelocidad();
+        assertEquals(50, velocidadFinal);
     }
 }

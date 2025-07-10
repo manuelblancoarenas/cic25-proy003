@@ -1,23 +1,25 @@
 package es.cic.curso25;
 
 public class Coche {
+    private final double CONSUMO_INSTANTANEO = 4.3;
+    private int velocidad = 0;
+    
     public int getVelocidad() {
-        // TODO: Pendiente de completar
-        throw new UnsupportedOperationException("No implementado aún");
+        return velocidad;
     }
 
     public double getConsumo() {
-        // TODO: Pendiente de completar
-        throw new UnsupportedOperationException("No implementado aún");
+        return velocidad / 100.0 * CONSUMO_INSTANTANEO;
+        // otra opción: ((double)velocidad)/100 * CONSUMO_INSTANTANEO; <-- ESTO SE LLAMA CASTING
     }
 
     public int acelerar(int incrementoDeVelocidad) {
-        // TODO: Pendiente de completar
-        throw new UnsupportedOperationException("No implementado aún");
+        this.velocidad += incrementoDeVelocidad;
+        return this.velocidad;
     }
 
     public int frenar(int decrementoDeVelocidad) {
-        // TODO: Pendiente de completar
-        throw new UnsupportedOperationException("No implementado aún");
+        this.velocidad -= decrementoDeVelocidad;
+        return this.velocidad;
     }
 }
