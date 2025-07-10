@@ -75,4 +75,17 @@ public class CalculadoraTest {
         assertThrows(ArithmeticException.class,
             () -> cut.dividir(0));
     }
+
+    @Test()
+    public void testLimpiar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+        cut.sumar(4.2);
+
+        cut.limpiar();
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
+    }
 } 

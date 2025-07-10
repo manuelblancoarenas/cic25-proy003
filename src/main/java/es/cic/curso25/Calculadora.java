@@ -26,4 +26,8 @@ public class Calculadora {
         total /= valor;
         }
     }
+
+    public void limpiar() {
+        total = 0;
+    }
 }

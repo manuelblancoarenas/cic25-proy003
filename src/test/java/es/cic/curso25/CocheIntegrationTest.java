@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class CocheTest {
+public class CocheIntegrationTest {
 
     private Coche cut; //lo declaro porque, si sólo lo usase en BeforeEach, al estar entre llaves sólo estaría accesible entre las llaves
     @BeforeEach
