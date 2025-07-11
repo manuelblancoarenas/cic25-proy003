@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 public class CocheIntegrationTest {
 
     private Coche cut; //lo declaro porque, si sólo lo usase en BeforeEach, al estar entre llaves sólo estaría accesible entre las llaves
-    @BeforeEach
+    @BeforeEach //su utilidad es crear un coche nuevo para cada test, de forma que el utilizado en el segundo sea uno distinto al usado en
+                //el primero, y así sucesivamente
     public void setUp() {
         cut = new Coche();
     }
